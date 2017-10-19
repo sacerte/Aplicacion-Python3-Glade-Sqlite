@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <requires lib="gtk+" version="2.16"/>
+  <!-- interface-naming-policy project-wide -->
+  <object class="GtkWindow" id="winMain">
+    <property name="visible">True</property>
+    <property name="title" translatable="yes">Aplicación Prueba</property>
+    <property name="mnemonics_visible">False</property>
+    <signal name="destroy" handler="on_winMain_destroy"/>
+    <child>
+      <object class="GtkVBox" id="vbox1">
+        <property name="visible">True</property>
+        <property name="spacing">2</property>
+        <child>
+          <object class="GtkMenuBar" id="menuWin">
+            <property name="visible">True</property>
+            <property name="ubuntu_local">True</property>
+            <child>
+              <object class="GtkMenuItem" id="itemModulos">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Modulos</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <property name="ubuntu_local">True</property>
+                    <child>
+                      <object class="GtkMenuItem" id="itemUsuarios">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Usuarios</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonUsuarios_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="itemProyectos">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Proyectos</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonProyectos_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="itemIssues">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Issues</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonIssues_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="itemComentarios">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Comentarios</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonComentarios_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="itemMensajes">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Mensajes</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonMensajes_clicked"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkSeparatorMenuItem" id="separador1">
+                        <property name="visible">True</property>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="itemSalir">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Salir</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonSalir_clicked"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="itemCambioPwd">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">_Cambiar Clave</property>
+                <property name="use_underline">True</property>
+                <signal name="activate" handler="on_itemCambioPwd_activate"/>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="itemAyuda">
+                <property name="visible">True</property>
+                <property name="label" translatable="yes">Ay_uda</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menuAcerca">
+                    <property name="visible">True</property>
+                    <property name="ubuntu_local">True</property>
+                    <child>
+                      <object class="GtkMenuItem" id="itemAcerca">
+                        <property name="visible">True</property>
+                        <property name="label" translatable="yes">Acerca de</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="on_botonAcerca_clicked"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkHBox" id="hbox1">
+            <property name="visible">True</property>
+            <property name="homogeneous">True</property>
+            <child>
+              <object class="GtkButton" id="botonSalir">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="is_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_text" translatable="yes">Desconectarse del sistema</property>
+                <property name="image">ibotonSalir</property>
+                <signal name="clicked" handler="on_botonSalir_clicked"/>
+              </object>
+              <packing>
+                <property name="position">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonUsuarios">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Módulo Usuarios</property>
+                <property name="image">ibotonUsuarios</property>
+                <signal name="clicked" handler="on_botonUsuarios_clicked"/>
+              </object>
+              <packing>
+                <property name="position">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonProyectos">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Proyectos</property>
+                <property name="image">ibotonProyectos</property>
+                <signal name="clicked" handler="on_botonProyectos_clicked"/>
+              </object>
+              <packing>
+                <property name="position">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonIssues">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Issues</property>
+                <property name="image">ibotonIssues</property>
+                <signal name="clicked" handler="on_botonIssues_clicked"/>
+              </object>
+              <packing>
+                <property name="position">3</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonComentarios">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Comentarios</property>
+                <property name="image">ibotonComentarios</property>
+                <signal name="clicked" handler="on_botonComentarios_clicked"/>
+              </object>
+              <packing>
+                <property name="position">4</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonMensajes">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">True</property>
+                <property name="tooltip_text" translatable="yes">Mensajes</property>
+                <property name="image">ibotonMensajes</property>
+                <signal name="clicked" handler="on_botonMensajes_clicked"/>
+              </object>
+              <packing>
+                <property name="position">5</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkButton" id="botonAcerca">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="receives_default">False</property>
+                <property name="has_tooltip">True</property>
+                <property name="tooltip_text" translatable="yes">Acerca del creador</property>
+                <property name="image">ibotonAcerca</property>
+                <signal name="clicked" handler="on_botonAcerca_clicked"/>
+              </object>
+              <packing>
+                <property name="position">6</property>
+              </packing>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkImage" id="ibotonSalir">
+    <property name="visible">True</property>
+    <property name="xpad">3</property>
+    <property name="ypad">7</property>
+    <property name="pixbuf">../recursos/salirGrande.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonUsuarios">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/usuarios.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonAcerca">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/acercaGrande.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonProyectos">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/proyectos.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonIssues">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/issues.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonComentarios">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/comentarios.png</property>
+  </object>
+  <object class="GtkImage" id="ibotonMensajes">
+    <property name="visible">True</property>
+    <property name="pixbuf">../recursos/mensajes.png</property>
+  </object>
+</interface>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+-
+- phpMyAdmin XML Dump
+- version 3.2.4
+- http://www.phpmyadmin.net
+-
+- Servidor: localhost
+- Tiempo de generación: 18-10-2011 a las 18:57:49
+- Versión del servidor: 5.1.44
+- Versión de PHP: 5.3.1
+-->
+
+<!--
+- Base de datos: 'trackstar'
+-->
+<trackstar>
+  <!-- Tabla comments -->
+  <!-- Tabla issues -->
+  <!-- Tabla projects -->
+    <projects>
+        <id>1</id>
+        <created_user_id>1</created_user_id>
+        <name>Python-GTK-MySQL</name>
+        <description>Desarrollo de aplicaciÃ³n intergrando Pyhton-GTK-MySQL.
+Python como lenguaje base.
+GTK para interfaz grÃ¡fica.
+MySQL para el acceso a datos.</description>
+        <created>2011-02-14 00:00:00</created>
+    </projects>
+    <projects>
+        <id>2</id>
+        <created_user_id>2</created_user_id>
+        <name>InstalaciÃ³n de Productos</name>
+        <description>InstalaciÃ³n de productos en servidor:
+* Python
+* LibrerÃ­as GTK
+* MySQL Server</description>
+        <created>2011-03-01 00:00:00</created>
+    </projects>
+    <projects>
+        <id>3</id>
+        <created_user_id>4</created_user_id>
+        <name>Ventana Principal</name>
+        <description>DiseÃ±o de la ventana principal de la aplicaciÃ³n.
+El proyecto solo involucra la parte grÃ¡fica (glade).</description>
+        <created>2011-04-06 00:00:00</created>
+    </projects>
+    <projects>
+        <id>5</id>
+        <created_user_id>5</created_user_id>
+        <name>Test</name>
+        <description>Usuario que hace pruebas en el sistema.</description>
+        <created>2011-04-07 00:00:00</created>
+    </projects>
+    <projects>
+        <id>6</id>
+        <created_user_id>1</created_user_id>
+        <name>BORRAR</name>
+        <description>BORRAR</description>
+        <created>2011-04-09 00:00:00</created>
+    </projects>
+  <!-- Tabla projects_users_assign -->
+    <projects_users_assign>
+        <id>12</id>
+        <project_id>1</project_id>
+        <owner_id>4</owner_id>
+        <created>2011-06-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>13</id>
+        <project_id>1</project_id>
+        <owner_id>1</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>16</id>
+        <project_id>1</project_id>
+        <owner_id>5</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>17</id>
+        <project_id>6</project_id>
+        <owner_id>3</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>18</id>
+        <project_id>6</project_id>
+        <owner_id>5</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>19</id>
+        <project_id>2</project_id>
+        <owner_id>2</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>20</id>
+        <project_id>3</project_id>
+        <owner_id>1</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>21</id>
+        <project_id>3</project_id>
+        <owner_id>4</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+    <projects_users_assign>
+        <id>22</id>
+        <project_id>3</project_id>
+        <owner_id>5</owner_id>
+        <created>2011-05-26 00:00:00</created>
+    </projects_users_assign>
+  <!-- Tabla users -->
+    <users>
+        <id>1</id>
+        <username>jmm</username>
+        <password>jmm</password>
+        <email>jotaeme1212@hotmail.com</email>
+        <name>Juan Manuel</name>
+    </users>
+    <users>
+        <id>2</id>
+        <username>admin</username>
+        <password>admin</password>
+        <email>No Tiene</email>
+        <name>Diana Admin</name>
+    </users>
+    <users>
+        <id>3</id>
+        <username>auditor</username>
+        <password></password>
+        <email>No Tiene</email>
+        <name>Juan Auditor</name>
+    </users>
+    <users>
+        <id>4</id>
+        <username>grafico</username>
+        <password></password>
+        <email>No Tiene</email>
+        <name>DiseÃ±ador GrÃ¡fico</name>
+    </users>
+    <users>
+        <id>5</id>
+        <username>test</username>
+        <password></password>
+        <email>test@mail.com</email>
+        <name>JosÃ© Pruebas</name>
+    </users>
+</trackstar>
